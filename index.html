@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Results summary component</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        /* font-size: 62.5%; */
+        box-sizing: border-box;
+        font-family: "Hanken Grotesk", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        width: 450px;
+        margin: 50px auto;
+      }
+
+      .con {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        box-shadow: 5px 5px 25px black;
+        gap: 10px;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .result {
+        background-color: #480cab;
+        text-align: center;
+        color: white;
+        padding: 12px;
+        border-radius: 9px;
+      }
+      .result p {
+        font-weight: 500;
+        margin-top: 13px;
+        margin-bottom: 13px;
+      }
+
+      .num {
+        margin: 25px 0;
+        background-color: #f1e6f8;
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+      .num .top {
+        font-size: 29px;
+        font-weight: 800;
+        color: #0b0112;
+      }
+      .room {
+        color: #7209b7;
+      }
+      .great {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 13px;
+      }
+
+      .text {
+        font-weight: 500;
+        font-size: 9px;
+        letter-spacing: 0.2px;
+        line-height: 1.7;
+        margin-bottom: 13px;
+      }
+
+      .summary {
+        padding: 12px;
+        margin-right: 15px;
+      }
+
+      .summary p {
+        font-weight: 600;
+        font-size: 19px;
+        margin-bottom: 15px;
+      }
+
+      .meen {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .btn {
+        margin-top: 20px;
+      }
+
+      .power {
+        display: flex;
+      }
+
+      .bro {
+        margin-left: auto;
+      }
+
+      .react {
+        background-color: #fde9ec;
+        height: 40px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .mem {
+        background-color: #fff6e6;
+        height: 40px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .comment {
+        background-color: #f3fcf9;
+        height: 40px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .eay {
+        background-color: #f1e6f8;
+        height: 40px;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .first {
+        color: #ef233c;
+      }
+
+      .first + span {
+        color: #ef233c;
+      }
+      .sec {
+        color: #faa307;
+      }
+
+      .sec + span {
+        color: #faa307;
+      }
+      .third {
+        color: #84dcc6;
+      }
+
+      .third + span {
+        color: #84dcc6;
+      }
+      .fourth {
+        color: #7209b7;
+      }
+
+      .fourth + span {
+        color: #7209b7;
+      }
+
+      .toto {
+        color: #aaa;
+      }
+
+      .btn {
+        cursor: pointer;
+        width: 100%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background-color: #c79de2;
+        color: #0b0112;
+        font-weight: 700;
+        font-size: 18px;
+        transition: all 0.7s;
+      }
+
+      .btn:hover {
+        background-color: #7209b7;
+        color: wheat;
+        transform: translateY(-3px);
+        box-shadow: 5px 5px 15px #266578;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <div class="con">
+        <div class="result">
+          <p>Your Result</p>
+          <div class="num">
+            <div class="top">76</div>
+            <div class="room">of 100</div>
+          </div>
+          <p class="gret">Great</p>
+          <p class="text">
+            you scored higher than 65% of the people who have taken these tests
+          </p>
+        </div>
+
+        <div class="summary">
+          <p>Summary</p>
+          <div class="meen">
+            <div class="power react">
+              <ion-icon class="first" name="flash-outline"></ion-icon>
+              <span>Reaction</span>
+              <div class="bro">
+                <strong>80</strong> <span class="toto"> / 100</span>
+              </div>
+            </div>
+
+            <div class="power mem">
+              <ion-icon class="sec" name="earth-outline"></ion-icon>
+
+              <span>Memory</span>
+              <div class="bro">
+                <strong>92</strong> <span class="toto"> / 100</span>
+              </div>
+            </div>
+
+            <div class="power comment">
+              <ion-icon
+                class="third"
+                name="chatbubble-ellipses-outline"
+              ></ion-icon>
+              <span>Verbal</span>
+              <div class="bro">
+                <strong> 61</strong> <span class="toto">/ 100</span>
+              </div>
+            </div>
+
+            <div class="power eay">
+              <ion-icon class="fourth" name="eye-outline"></ion-icon>
+              <span> Visual</span>
+              <div class="bro">
+                <strong>72</strong> <span class="toto">/ 100</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn">Continue</button>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
